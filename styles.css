@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+.highlighted {
+  opacity: 0.5;
+}
+
+body {
+  display: flex;
+  align-content: center;
+  background: #f3ffff;
+  opacity: 1;
+
+  margin-top: 5%;
+}
+
+.game {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-left: 30%;
+}
+
+.slot {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.hole {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 40px solid #4cbfd6;
+  box-sizing: content-box;
+  transform: translate(-30px, -30px);
+}
+
+.player1 {
+  background: #d2141b;
+}
+
+.player2 {
+  background: #f5de1a;
+}
+
+.pl1 {
+  border: 10px solid #d2141b;
+}
+
+.pl2 {
+  border: 10px solid #f5de1a;
+}
+
+.board {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  border-radius: 1%;
+  border: 7px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+
+@keyframes blink1 {
+  50% {
+    border-bottom: 50px solid #d2141b;
+    border-radius: 1%;
+  }
+}
+@keyframes blink2 {
+  50% {
+    border-bottom: 50px solid #f5de1a;
+    border-radius: 1%;
+  }
+}
+
+.board1 {
+  animation: blink1 0.5s step-end infinite alternate;
+}
+
+.board2 {
+  animation: blink2 0.5s step-end infinite alternate;
+}
+
+.score-board {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+  background: #7ecbd9;
+  border: 3px solid #4cbfd6;
+  margin: 2%;
+}
+.banner-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  visibility: hidden;
+}
+.banner-box.on {
+  visibility: visible;
+  overflow: hidden;
+}
+
+/* .banner.one {
+    visibility: visible;
+    left: -100%;
+    background: #d2141b;
+} */
+
+/* .banner.two {
+    visibility: visible;
+    left: -100%;
+    background: #f5de1a;
+} */
+
+/* .banner {
+  visibility: hidden;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  left: 100%;
+  z-index: 100;
+  font-size: 10em;
+  transition: all 4.5s ease;
+  padding-top: 20%;
+  padding-left: 30%;
+} */
